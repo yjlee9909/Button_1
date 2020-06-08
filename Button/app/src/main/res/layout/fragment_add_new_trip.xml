@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:id="@+id/activityAddNewTrip"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingBottom="16dp"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp"
+    android:paddingTop="16dp"
+    tools:context=".Fragment_add_new_trip"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+
+    <LinearLayout
+        android:id="@+id/linear_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <EditText
+                android:id="@+id/tname"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:backgroundTint="#000000"
+                android:ems="10"
+                android:maxLines="1"
+                android:hint="Enter trip Name"
+                android:popupBackground="#ffffff"
+                android:textColor="#000000"
+                android:textColorHint="#000000"
+                android:inputType="text"
+                tools:targetApi="lollipop" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:src="@drawable/ic_event"
+                android:layout_weight="0"/>
+            <TextView
+                android:id="@+id/sdate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:layout_weight="1"
+                android:textSize="18sp"
+                android:layout_marginTop="10dp"
+                android:hint="@string/init_text"
+                android:textColor="?attr/editTextColor"
+                android:background="?attr/editTextBackground" />
+            <Button
+                android:id="@+id/btn_date"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:paddingEnd="2dp"
+                android:text="@string/pick_date"
+                android:textStyle="bold"
+                android:onClick="showDatePickerDialog"
+                android:background="#81BEE4"
+                tools:ignore="OnClick" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:src="@drawable/ic_location"
+                android:layout_weight="0"/>
+            <TextView
+                android:layout_weight="1"
+                android:id="@+id/select_city_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:textSize="18sp"
+                android:layout_marginTop="10dp"
+                android:hint="@string/prompt_city_name"
+                android:textColor="?attr/editTextColor"
+                android:background="?attr/editTextBackground" />
+
+            <Button
+                android:id="@+id/btn_course"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:paddingEnd="2dp"
+                android:text="@string/pick_date"
+                android:textStyle="bold"
+                android:background="#81BEE4"
+                tools:ignore="OnClick" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/ok"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:layout_marginTop="10dp"
+            android:background="#03A9F4"
+            android:text="@string/prompt_add_trip"
+            android:textColor="#ffffff" />
+    </LinearLayout>
+</LinearLayout>
